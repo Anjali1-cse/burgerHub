@@ -1,0 +1,148 @@
+/* === Cart Page Wrapper === */
+.cart-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-page h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff7b00;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* === Empty Cart === */
+.cart-page p {
+  text-align: center;
+  color: #777;
+}
+
+/* === Cart List === */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* === Cart Item === */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* === Left Section (Burger Info) === */
+.cart-item h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cart-item p {
+  margin: 3px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.cart-item .muted {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* === Right Section (Price + Remove) === */
+.cart-right {
+  text-align: right;
+}
+
+.cart-right p {
+  font-size: 1.1rem;
+  color: #ff7b00;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* === Buttons === */
+.btn-danger {
+  background: linear-gradient(135deg, #ff4d4d, #ff7b7b);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-danger:hover {
+  background: #ff3333;
+  transform: scale(1.05);
+}
+
+/* === Summary Section === */
+.cart-summary {
+  margin-top: 30px;
+  text-align: center;
+  padding: 25px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* === Checkout Button === */
+.btn {
+  background: linear-gradient(135deg, #ff7b00, #ff9f43);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(255, 123, 0, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff8c1a, #ffad5c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(255, 123, 0, 0.35);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-right {
+    text-align: left;
+    width: 100%;
+  }
+
+  .btn,
+  .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+}

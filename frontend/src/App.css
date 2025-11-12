@@ -1,0 +1,47 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff7b00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #ff9f43;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #ff7b00;
+}
+
+a:hover {
+  text-decoration: underline;
+}

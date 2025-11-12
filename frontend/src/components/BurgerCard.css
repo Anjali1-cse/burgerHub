@@ -1,0 +1,122 @@
+/* ===== Burger Card Styles ===== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 320px;
+  margin: 15px auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Image ===== */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== Body ===== */
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.card-body .muted {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* ===== Toppings Row ===== */
+.toppings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.topping {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.topping:hover {
+  background: #ffe7cc;
+}
+
+.topping input {
+  margin-right: 6px;
+  accent-color: #ff7b00;
+}
+
+/* ===== Controls Row ===== */
+.card-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.qty {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.qty input {
+  width: 50px;
+  padding: 4px 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff7b00;
+  font-size: 1.1rem;
+}
+
+/* ===== Add Button ===== */
+.btn {
+  background: #ff7b00;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff9f43;
+}

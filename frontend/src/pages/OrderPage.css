@@ -1,0 +1,129 @@
+/* === My Orders Page === */
+.orders-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.orders-page h2 {
+  text-align: center;
+  color: #ff7b00;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* === Order Card === */
+.order-card {
+  background: #fff;
+  border: 1px solid #ffe0b3;
+  border-radius: 16px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* === Order Header === */
+.order-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.order-header h3 {
+  margin: 0;
+  color: #ff7b00;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.order-header p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.order-header p span {
+  font-weight: 500;
+  color: #222;
+}
+
+/* === Order Items === */
+.order-items {
+  margin-top: 10px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #eee;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item div:first-child {
+  font-weight: 500;
+}
+
+.order-item div:last-child {
+  color: #222;
+  font-weight: 600;
+}
+
+/* === Toppings List === */
+.toppings-list {
+  margin-top: 4px;
+}
+
+.toppings-list small {
+  color: #777;
+  font-style: italic;
+}
+
+/* === Status Badge === */
+.order-header p:nth-child(2) {
+  background: #fff3e0;
+  color: #ff7b00;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .order-card {
+    padding: 15px 18px;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item div:last-child {
+    margin-top: 4px;
+  }
+}

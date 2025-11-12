@@ -1,0 +1,115 @@
+/* === Navbar Container === */
+.nav {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* === Brand / Logo === */
+.brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff7b00;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.brand:hover {
+  color: #ff9f33;
+}
+
+/* === Navigation Links === */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-right a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s;
+  position: relative;
+}
+
+.nav-right a:hover {
+  color: #ff7b00;
+  transform: translateY(-2px);
+}
+
+/* Subtle underline on hover */
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff7b00;
+  transition: width 0.3s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* === Greeting === */
+.greet {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* === Logout Button === */
+.btn-link {
+  background: linear-gradient(135deg, #ff7b00, #ff4d4d);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-link:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 10px rgba(255, 123, 0, 0.3);
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .btn-link {
+    width: 100%;
+    text-align: center;
+  }
+}
