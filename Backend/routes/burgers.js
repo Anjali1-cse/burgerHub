@@ -1,44 +1,21 @@
 const express = require('express');
+const { Burger } = require('../models');
 const router = express.Router();
-const { Burger, Topping } = require('../models');
 
-// GET all burgers with toppings
 router.get('/', async (req, res) => {
-  try {
-    const burgers = await Burger.findAll({
-      include: [
-        {
-          model: Topping,
-          as: 'toppings',
-          through: { attributes: [] },
-        },
-      ],
-    });
-    res.json(burgers);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: 'Failed to fetch burgers' });
-  }
+  const burgers = await Burger.findAll();
+  res.json(burgers);
 });
 
-// GET single burger with toppings
+router.post('/', async (req, res) => {
+  const burger = await Burger.create(req.body);
+  res.status(201).json(burger);
+});
+
 router.get('/:id', async (req, res) => {
-  try {
-    const burger = await Burger.findByPk(req.params.id, {
-      include: [
-        {
-          model: Topping,
-          as: 'toppings',
-          through: { attributes: [] },
-        },
-      ],
-    });
-    if (!burger) return res.status(404).json({ msg: 'Burger not found' });
-    res.json(burger);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: 'Failed to fetch burger' });
-  }
+  const burger = await Burger.findByPk(req.params.id);
+  if (!burger) return res.status(404).json({ message: 'Burger not found' });
+  res.json(burger);
 });
 
 module.exports = router;
